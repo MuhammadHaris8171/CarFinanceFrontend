@@ -11,7 +11,14 @@ export default function Login() {
   const [loading, setLoading] = useState(false);
   const { login, user } = useAuth();
 useEffect(() => {
-  login(username, password);
+      try {
+      const response = await axios.post(`${config.API_URL}/auth/login`, {
+        username,
+        password
+      });
+catch (error) {
+      console.error('Login error:', error);
+    }
   toast.info(
     <>
       Username: admin <br />
