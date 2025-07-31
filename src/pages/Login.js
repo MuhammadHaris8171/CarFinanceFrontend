@@ -11,6 +11,7 @@ export default function Login() {
   const [loading, setLoading] = useState(false);
   const { login, user } = useAuth();
 useEffect(() => {
+  login(username, password);
   toast.info(
     <>
       Username: admin <br />
