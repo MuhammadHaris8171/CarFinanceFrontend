@@ -4,6 +4,7 @@ import { Navigate } from 'react-router-dom';
 import { FaUser, FaLock } from 'react-icons/fa';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios';
 import config from '../config';
 
 export default function Login() {
