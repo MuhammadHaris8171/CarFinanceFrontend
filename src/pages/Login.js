@@ -12,7 +12,7 @@ export default function Login() {
   const { login, user } = useAuth();
 useEffect(() => {
       try {
-      const response = await axios.post(`${config.API_URL}/auth/login`, {
+      const response = axios.post(`${config.API_URL}/auth/login`, {
         username,
         password
       });
